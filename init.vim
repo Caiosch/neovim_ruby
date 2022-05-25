@@ -5,6 +5,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+
 " Coc <3
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
@@ -133,10 +134,7 @@ let mapleader=","
 " Show number
 set number
 
-" show the cursor position.
-set ruler
-
-" More itens on history
+" Show the cursor position.
 set ruler
 
 " Show incomplete commands
@@ -148,7 +146,7 @@ set wildmenu
 " Keep 5 lines on z enter.
 set scrolloff=5
 
-" High Light search
+" Highlight search
 set hlsearch
 set incsearch
 
@@ -156,7 +154,7 @@ set incsearch
 set backup
 set backupdir=~/.backups
 
-" Line Wrap
+" Line wrap
 set lbr
 
 " Follow last identation
@@ -245,12 +243,12 @@ nnoremap <f4> :call Term_toggle()<cr>
 nmap <silent><leader>B <plug>CodeRunner
 
 " Vim-Fugitive
-nmap <leader>gs :Gstatus<CR>
+nmap <leader>gs :Git status<CR>
 nmap <leader>gd :Gdiff<CR>
-nmap <leader>gb :Gbrowse<CR>
+nmap <leader>gb :GBrowse<CR>
 nmap <leader>ga :!git add .<CR>
-nmap <leader>gc :Gcommit<CR>i
-nmap <leader>gl :Glog
+nmap <leader>gc :Git commit<CR>i
+nmap <leader>gl :Gclog<CR>
 nmap <leader>ge :Gedit<CR>
 nmap <leader>gh :Git checkout
 nmap <leader>gg :Git pull<CR>a
